@@ -2,15 +2,36 @@ var d = document.getElementById("dibujito");
 var lienzo = d.getContext("2d");
 var lineas = 30;
 var l = 0;
-var yi,xf;
+var yi, xf, xi, yf;
 
-while(l < lineas)
+for (l=0; l < lineas; l++)
 {
   yi = 10 * l;
   xf = 10 * (l + 1);
   dibujarLinea("#AAF", 0, yi, xf, 300);
   console.log("lineas " + l);
-  l = l + 1; /*tambien funciona l++ */
+}
+/* Tarea de Freddy Vega en Platzi*/
+
+for (l=0; l < lineas; l++)
+{
+  xi = 10 * l;
+  yf = 10 * (l + 1);
+  dibujarLinea("#AAF", xi, 0, 300, yf);
+}
+
+for (l=0; l < lineas; l++)
+{
+  yi = 10 * l;
+  xf = 10 * (30 - l);
+  dibujarLinea("#AAF", 0, yi, xf, 0);
+}
+
+for (l=0; l < lineas; l++)
+{
+  xi = 10 * l;
+  yf = 10 * (30 - l);
+  dibujarLinea("#AAF", xi, 300, 300, yf);
 }
 
 dibujarLinea("#AFA", 1, 1, 1, 299);
