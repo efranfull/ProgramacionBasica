@@ -31,6 +31,7 @@ function dibujarLinea(color, xinicial, yinicial, xfinal, yfinal)
 
 function dibujarTeclado(evento)
 {
+  console.log(evento);
   var colorcito = "blue";
   var movimiento = 10;
   switch (evento.keyCode)
