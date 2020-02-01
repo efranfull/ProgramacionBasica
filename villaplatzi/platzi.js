@@ -22,7 +22,7 @@ cerdo.imagen.addEventListener("load", cargarCerdos);
 
 pollo.imagen = new Image();
 pollo.imagen.src = pollo.url;
-pollo.imagen.addEventListener("load", cargarCerdos);
+pollo.imagen.addEventListener("load", cargarPollos);
 
 function cargarFondo()
 { fondo.cargarOk = true; //solo se ejecuta cuando se carga la var fondo
@@ -67,8 +67,27 @@ function dibujar()
       papel.drawImage(vaca.imagen, x, y);
     }
   }
-  //if(cerdo.cargarOk) {papel.drawImage(cerdo.imagen, 0, 0);}
-  //if(pollo.cargarOk){papel.drawImage(pollo.imagen, )}
+  if(cerdo.cargarOk)
+  for(var c=0; c < cantidad; c++)
+  {
+    var x = aleatorio(0, 5);
+    var y = aleatorio(0, 5);
+    var x = x * 80; //agregado para que las vacas no se vean tan juntas.
+    var y = y * 80;
+    papel.drawImage(cerdo.imagen, x, y);
+  }
+
+  if(pollo.cargarOk)
+  {
+    for(var p=0; p < cantidad; p++)
+    {
+      var x = aleatorio(0, 5);
+      var y = aleatorio(0, 5);
+      var x = x * 80; //agregado para que las vacas no se vean tan juntas.
+      var y = y * 80;
+    papel.drawImage(pollo.imagen, x, y);
+    }
+  }
 }
 
 
